@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+  // Payment Form Sections
   const forms = {
     checking: document.getElementById('checking-form'),
     debit: document.getElementById('debit-form'),
@@ -8,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     debit: document.getElementById('debit-image'),
   };
 
+  // Toggles the State from checking to debit card, depending on the value of the radio button
   const togglePaymentType = (e) => {
     const type = e.target.value;
     const otherType = type === 'checking' ? 'debit' : 'checking';
@@ -20,6 +22,8 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll(`#${otherType}-form input`).forEach(input => input.removeAttribute('required'));
   };
 
+  // Form Submission
+    // Payment Confirmation Message
   const handleFormSubmit = (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);
@@ -30,10 +34,14 @@ document.addEventListener('DOMContentLoaded', () => {
       li.textContent = `${key}: ${data[key]}`;
       ul.appendChild(li);
     }
+    const p = document.createElement('p');
+    p.textContent = 'Thank you for your payment!';
+    document.getElementById('confirmation').appendChild(p);
     document.getElementById('confirmation').appendChild(ul);
     e.target.reset();
   };
 
+  // Form Validation Generic Function
   const validateField = (field, condition, message) => {
     if (!condition) {
       field.setCustomValidity(message);
@@ -42,6 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
+  // Form Validation Functions
   const validateRouting = (e) => {
     validateField(e.target, e.target.value.length <= 9, 'Routing number must be less than 9 digits');
   };
