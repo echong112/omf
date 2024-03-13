@@ -38,7 +38,9 @@ document.addEventListener('DOMContentLoaded', () => {
     p.textContent = 'Thank you for your payment!';
     document.getElementById('confirmation').appendChild(p);
     document.getElementById('confirmation').appendChild(ul);
+    // reset form
     e.target.reset();
+    togglePaymentType({ target: { value: 'checking' } });
   };
 
   // Form Validation Generic Function
