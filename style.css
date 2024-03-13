@@ -97,16 +97,11 @@ input[type="radio"]:last-of-type {
   border-bottom: none;
 }
 
-
 /* Utility */
-.blue-bg {
-  background: rgb(205, 227, 236);
-}
+
 .zero-margin {
   margin: 0;
 }
-
-/* Fonts and Typography */
 .regular {
   font-weight: 400;
 }
