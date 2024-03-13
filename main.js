@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
     validateField(e.target, e.target.value.length === 3, 'CVV must be 3 digits');
   };
 
-  const validatePassword = (e) => {
+  const validateAccount = (e) => {
     const account = document.getElementById('account').value;
     validateField(e.target, e.target.value === account, 'Account Numbers must match');
   };
@@ -73,5 +73,5 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('debit').addEventListener('change', togglePaymentType);
   document.getElementById('routing').addEventListener('input', validateRouting);
   document.getElementById('cvv').addEventListener('input', validateCVV);
-  document.getElementById('confirm').addEventListener('input', validatePassword);
+  document.getElementById('confirm').addEventListener('input', validateAccount);
 });
