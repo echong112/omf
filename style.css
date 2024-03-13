@@ -1,0 +1,145 @@
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input:focus {
+  outline: none;
+}
+
+#app {
+  max-width: 800px;
+  margin: auto;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+}
+
+#payment-form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Layouts */
+
+.row {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.centered {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  background: rgb(205, 227, 236);
+  font-weight: 500;
+  border: #1d1d1d 1px solid;
+}
+
+/* HTML Element */
+
+button {
+  margin: 15px 0;
+  text-transform: uppercase;
+  background: #4aa09e;
+  padding: 15px;
+  color: white;
+  font-weight: 700;
+  border: none;
+}
+
+label {
+  font-size: 12px;
+  font-weight: 700;
+  margin: 5px 0 0 5px;
+}
+
+input {
+  margin: 10px 0;
+  padding: 0 0 0 5px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: text;
+  border: none;
+}
+
+
+/* radios */
+input[type="radio"] {
+  font-size: 14px;
+  margin-left: 5px;
+}
+input[type="radio"]:last-of-type {
+  margin-left: 25px;
+}
+
+
+/* cell */
+.cell,
+#checking-form > div,
+#debit-form > div {
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0;
+  border: #1d1d1d 1px solid;
+  border-bottom: none;
+}
+
+
+/* Utility */
+.blue-bg {
+  background: rgb(205, 227, 236);
+}
+.zero-margin {
+  margin: 0;
+}
+
+/* Fonts and Typography */
+.regular {
+  font-weight: 400;
+}
+
+.heading {
+  font-size: 32px;
+  margin: 15px 0;
+  font-weight: 700;
+  font-style: normal;
+}
+.sub-heading {
+  font-size: 16px;
+}
+.large-font {
+  font-size: 14px;
+}
+@media screen and (min-width: 800px) {
+  .row {flex-direction: row;}
+  .half {
+    width: 50%;
+  }
+  button {
+    max-width: 50%;
+    width: 250px;
+  }
+  .full {
+    width: 100%;
+  }
+  .centered {
+    border-left: none;
+  }
+  #checking-form ,
+  #debit-form {
+    border-bottom: 1px solid #1d1d1d;
+  }
+}
